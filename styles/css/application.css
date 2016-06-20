@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'Montserrat Bold';
+  font-style: normal;
+  src: url(../../fonts/montserrat-bold.otf) format("opentype"); }
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  src: url(../../fonts/montserrat-regular.otf) format("opentype"); }
+@font-face {
+  font-family: 'Montserrat Light';
+  font-style: normal;
+  src: url(../../fonts/montserrat-light.otf) format("opentype"); }
+@font-face {
+  font-family: 'Tex Gyre Adventor Bold';
+  font-style: normal;
+  src: url(../../fonts/texgyreadventor-bold.otf) format("opentype"); }
+@font-face {
+  font-family: 'Tex Gyre Adventor Italic';
+  font-style: italic;
+  src: url(../../fonts/texgyreadventor-italic.otf) format("opentype"); }
+header .load img, main .packs_section .load img {
+  width: 16.875rem;
+  margin: 1.563rem 0.438rem 0; }
+
+footer .links div {
+  display: inline-block;
+  color: white;
+  width: 9.063rem;
+  height: 2.5rem;
+  padding: 0.438rem;
+  border-radius: 3.125rem;
+  background: purple; }
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+body {
+  text-align: center;
+  margin: auto;
+  width: 1200px;
+  border: 1px solid red; }
+  body h1 span {
+    color: #f6cb16; }
+  body a {
+    color: inherit;
+    text-decoration: blink; }
+    body a:hover {
+      text-decoration: blink;
+      color: inherit; }
+  body img {
+    width: 100%; }
+  body textarea, body input, body button {
+    padding: 0px;
+    border: none;
+    background: none;
+    outline: none; }
+    body textarea:focus::-webkit-input-placeholder, body input:focus::-webkit-input-placeholder, body button:focus::-webkit-input-placeholder {
+      opacity: 0; }
+
+@media only screen and (min-width: 1220px) {
+  html {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Montserrat Regular"; } }
+@media only screen and (max-width: 1220px) {
+  html {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Montserrat Regular"; } }
+header {
+  margin: 3.75rem auto 6.875rem; }
+  header h1 {
+    font-size: 4.063rem;
+    line-height: 6.0945rem;
+    font-family: "Tex Gyre Adventor Bold";
+    margin: 5rem auto; }
+  header .logo {
+    width: 10.938rem; }
+  header .app_icon {
+    width: 20.625rem; }
+
+main h1 {
+  font-size: 3.75rem;
+  line-height: 5.0625rem;
+  font-family: "Tex Gyre Adventor Bold"; }
+main p {
+  font-size: 1.875rem;
+  line-height: 3rem;
+  font-family: "Montserrat Light";
+  margin: 0.438rem auto 1.25rem; }
+  main p i {
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
+    font-family: "Tex Gyre Adventor Italic"; }
+main .cards_section {
+  color: white;
+  position: relative;
+  height: 70.625rem; }
+  main .cards_section::before {
+    content: '';
+    -webkit-transform: skew(0deg, -5deg);
+    -moz-transform: skew(0deg, -5deg);
+    -o-transform: skew(0deg, -5deg);
+    -ms-transform: skew(0deg, -5deg);
+    transform: skew(0deg, -5deg);
+    position: absolute;
+    left: calc((-100vw + 100%)/2);
+    top: calc(0.087488663525924 * 53%);
+    right: 0;
+    width: 100vw;
+    z-index: -10;
+    margin: 0;
+    height: 100%;
+    background: #f6cb16 url(../../img/yellow-bg.jpg); }
+  main .cards_section .cards {
+    position: relative;
+    height: 41.563rem; }
+    main .cards_section .cards .card#back {
+      position: absolute;
+      left: 21.875rem;
+      top: 12.5rem;
+      right: 0;
+      width: 18.75rem;
+      z-index: 1;
+      margin: 0; }
+    main .cards_section .cards .card#front {
+      position: absolute;
+      left: 33.75rem;
+      top: 15.625rem;
+      right: 0;
+      width: 18.75rem;
+      z-index: -1;
+      margin: 0; }
+main .steps_section .step {
+  width: 100%;
+  clear: both;
+  border: 1px solid purple; }
+  main .steps_section .step:nth-child(odd) .step_img {
+    float: left;
+    border: 1px solid blue; }
+  main .steps_section .step:nth-child(odd) .step_text {
+    float: right;
+    border: 1px solid aqua; }
+  main .steps_section .step:nth-child(even) .step_img {
+    float: right;
+    border: 1px solid blue; }
+  main .steps_section .step:nth-child(even) .step_text {
+    float: left;
+    border: 1px solid aqua; }
+  main .steps_section .step .step_img {
+    width: 50%; }
+  main .steps_section .step .step_text {
+    width: 50%; }
+  main .steps_section .step#step1 .step_img #tv {
+    width: 46.563rem; }
+  main .steps_section .step#step1 .step_img #box {
+    width: 16.875rem; }
+  main .steps_section .step#step2 .step_img #remote {
+    width: 46.875rem; }
+  main .steps_section .step#step3 .step_img img {
+    height: 9.563rem;
+    width: auto; }
+  main .steps_section .step#step4 .step_img #question {
+    width: 20.625rem; }
+  main .steps_section .step#step4 .step_img #code {
+    width: 17.813rem; }
+main .packs_section .packs {
+  visibility: hidden;
+  height: 500px; }
+main .packs_section .hand {
+  width: 10.625rem; }
+
+footer .links div {
+  font-size: 15px;
+  line-height: 22.5px;
+  font-family: "Montserrat Regular"; }
+footer p {
+  font-size: 15px;
+  line-height: 22.5px;
+  font-family: "Montserrat Light";
+  color: #797979; }
+footer img {
+  width: 17.5rem; }
+
+/*# sourceMappingURL=application.css.map */

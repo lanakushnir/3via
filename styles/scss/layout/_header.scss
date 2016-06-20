@@ -1,0 +1,18 @@
+
+
+header {
+  margin: $px60 auto $px110;
+  h1 {
+    @include font( $px65, $fontTexGyreAdventorBold );
+    margin: $px80 auto;
+  }
+  .logo {
+    width: $px175;
+  }
+  .app_icon {
+    width: $px330;
+  }
+  .load {
+    @extend %load-button;
+  }
+}

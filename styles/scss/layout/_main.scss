@@ -1,0 +1,115 @@
+
+
+main {
+
+  h1 {
+    @include font( $px60, $fontTexGyreAdventorBold, 1.35 );
+  }
+  p {
+    @include font( $px30, $fontMontserratLight, 1.6 );
+    margin: $px10 auto $px20;
+    i {
+      @include font( $px30, $fontTexGyreAdventorItalic );
+    }
+  }
+  // CARDS
+  .cards_section {
+    color: $White;
+    position: relative;
+    height: $px1130;
+    &::before {
+      content: '';
+      @include transform-skew(0, -5);
+      @include absolute( calc((-100vw + 100%)/2), calc(0.087488663525924 * 53%), 100vw, -10 );
+      height: 100%;
+      background: $active3via url(../../img/yellow-bg.jpg);
+    }
+    .cards {
+      position: relative;
+      height: $px665;
+      .card {
+        &#back {
+          @include absolute( $px350, $px200, $px300 );
+        }
+        &#front {
+          @include absolute( $px540, $px250, $px300, -1 );
+        }
+      }
+    }
+  }
+  // STEPS
+  .steps_section {
+    .step {
+      width: 100%;
+      clear: both;
+      border: 1px solid purple;
+
+      &:nth-child(odd) {
+        .step_img {
+          float: left;
+          border: 1px solid blue;
+        }
+        .step_text {
+          float: right;
+          border: 1px solid aqua;
+        }
+      }
+      &:nth-child(even) {
+        .step_img {
+          float: right;
+          border: 1px solid blue;
+        }
+        .step_text {
+          float: left;
+          border: 1px solid aqua;
+        }
+      }
+
+      .step_img {
+        width: 50%;
+      }
+      .step_text {
+        width: 50%;
+      }
+      &#step1 .step_img {
+        #tv {
+          width: $px745;
+        }
+        #box {
+          width: $px270;
+        }
+      }
+      &#step2 .step_img {
+        #remote {
+          width: $px750;
+        }
+      }
+      &#step3 .step_img img {
+        height: $px153;
+        width: auto;
+      }
+      &#step4 .step_img {
+        #question {
+          width: $px330;
+        }
+        #code {
+          width: $px285;
+        }
+      }
+    }
+  }
+  // PACKS
+  .packs_section {
+    .packs {
+      visibility: hidden;
+      height: 500px;
+    }
+    .load {
+      @extend %load-button;
+    }
+    .hand {
+      width: $px170;
+    }
+  }
+
+}

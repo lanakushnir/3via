@@ -1,0 +1,15 @@
+
+
+footer {
+  .links div {
+    @include font( 15px, $fontMontserratRegular );
+    @extend %link-button;
+  }
+  p {
+    @include font( 15px, $fontMontserratLight );
+    color: $H797979;
+  }
+  img {
+    width: $px280;
+  }
+}

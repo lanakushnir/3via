@@ -1,0 +1,38 @@
+
+
+// Font Variables
+
+$fontMontserratBold:            'Montserrat Bold';
+$fontMontserratRegular:         'Montserrat Regular';
+$fontMontserratLight:           'Montserrat Light';
+$fontTexGyreAdventorBold:       'Tex Gyre Adventor Bold';
+$fontTexGyreAdventorItalic:     'Tex Gyre Adventor Italic';
+
+
+// MONTSERRAT
+@font-face {
+  font-family: 'Montserrat Bold';
+  font-style: normal;
+  src: url(../../fonts/montserrat-bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  src: url(../../fonts/montserrat-regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Montserrat Light';
+  font-style: normal;
+  src: url(../../fonts/montserrat-light.otf) format('opentype');
+}
+// TEX GYRE ADVENTOR
+@font-face {
+  font-family: 'Tex Gyre Adventor Bold';
+  font-style: normal;
+  src: url(../../fonts/texgyreadventor-bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Tex Gyre Adventor Italic';
+  font-style: italic;
+  src: url(../../fonts/texgyreadventor-italic.otf) format('opentype');
+}
