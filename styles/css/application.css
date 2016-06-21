@@ -116,7 +116,8 @@ main .cards_section {
     z-index: -10;
     margin: 0;
     height: 100%;
-    background: #f6cb16 url(../../img/yellow-bg.jpg); }
+    background: #f6cb16 url(../../img/yellow-bg.jpg) center center no-repeat;
+    background-size: cover; }
   main .cards_section .cards {
     position: relative;
     height: 41.563rem; }
@@ -224,9 +225,63 @@ main .steps_section {
       padding: 17.5rem 4.063rem 16.875rem; }
 main .packs_section .packs {
   height: 62.5rem;
-  background: #ad57c9; }
-  main .packs_section .packs div {
-    display: none; }
+  position: relative; }
+  main .packs_section .packs .pack#castle {
+    position: absolute;
+    left: -70px;
+    top: 0;
+    right: 0;
+    width: 62.5rem;
+    z-index: 1;
+    margin: 0; }
+  main .packs_section .packs .pack#field {
+    position: absolute;
+    left: 430px;
+    top: 70px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 2;
+    margin: 0; }
+  main .packs_section .packs .pack#orange {
+    position: absolute;
+    left: -230px;
+    top: 215px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 3;
+    margin: 0; }
+  main .packs_section .packs .pack#panda {
+    position: absolute;
+    left: 140px;
+    top: 230px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 4;
+    margin: 0; }
+  main .packs_section .packs .pack#mountain {
+    position: absolute;
+    left: 535px;
+    top: 285px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 3;
+    margin: 0; }
+  main .packs_section .packs .pack#flower {
+    position: absolute;
+    left: -280px;
+    top: 440px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 2;
+    margin: 0; }
+  main .packs_section .packs .pack#aurora {
+    position: absolute;
+    left: 250px;
+    top: 490px;
+    right: 0;
+    width: 62.5rem;
+    z-index: 1;
+    margin: 0; }
 main .packs_section h1 {
   padding: 3.125rem 0; }
 main .packs_section .load {

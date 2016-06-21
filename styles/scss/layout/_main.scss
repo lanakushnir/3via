@@ -22,7 +22,8 @@ main {
       @include transform-skew(0, -5);
       @include absolute( calc((-100vw + 100%)/2), calc(0.087488663525924 * 53%), 100vw, -10 );
       height: 100%;
-      background: $active3via url(../../img/yellow-bg.jpg);
+      background: $active3via url(../../img/yellow-bg.jpg) center center no-repeat;
+      background-size: cover;
     }
     .cards {
       position: relative;
@@ -112,9 +113,29 @@ main {
   .packs_section {
     .packs {
       height: $px1000;
-      background: rgb(173,87,201);
-      div {
-        display: none;
+      position: relative;
+      .pack {
+        &#castle {
+          @include absolute( -70px, 0, $px1000 );
+        }
+        &#field {
+          @include absolute( 430px, 70px, $px1000, 2 );
+        }
+        &#orange {
+          @include absolute( -230px, 215px, $px1000, 3 );
+        }
+        &#panda {
+          @include absolute( 140px, 230px, $px1000, 4 );
+        }
+        &#mountain {
+          @include absolute( 535px, 285px, $px1000, 3 );
+        }
+        &#flower {
+          @include absolute( -280px, 440px, $px1000, 2 );
+        }
+        &#aurora {
+          @include absolute( 250px, 490px, $px1000 );
+        }
       }
     }
     h1 {
