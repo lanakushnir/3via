@@ -4,6 +4,18 @@ footer {
   .links div {
     @include font( 15px, $fontMontserratRegular );
     @extend %link-button;
+    &#terms {
+      background: $active3via;
+    }
+    &#contact {
+      background: $Black;
+    }
+    &#fb {
+      background: $facebook;
+    }
+    &#tw {
+      background: $twitter;
+    }
   }
   p {
     @include font( 15px, $fontMontserratLight );
@@ -11,5 +23,6 @@ footer {
   }
   img {
     width: $px280;
+    margin: $px14 auto $px18;
   }
 }

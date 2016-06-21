@@ -28,8 +28,8 @@ footer .links div {
   width: 9.063rem;
   height: 2.5rem;
   padding: 0.438rem;
-  border-radius: 3.125rem;
-  background: purple; }
+  margin: 3.125rem 0.5rem;
+  border-radius: 3.125rem; }
 
 *, *:before, *:after {
   padding: 0;
@@ -45,7 +45,7 @@ body {
   text-align: center;
   margin: auto;
   width: 1200px;
-  border: 1px solid red; }
+  margin: 60px auto; }
   body h1 span {
     color: #f6cb16; }
   body a {
@@ -74,17 +74,15 @@ body {
     font-size: 12px;
     line-height: 18px;
     font-family: "Montserrat Regular"; } }
-header {
-  margin: 3.75rem auto 6.875rem; }
-  header h1 {
-    font-size: 4.063rem;
-    line-height: 6.0945rem;
-    font-family: "Tex Gyre Adventor Bold";
-    margin: 5rem auto; }
-  header .logo {
-    width: 10.938rem; }
-  header .app_icon {
-    width: 20.625rem; }
+header h1 {
+  font-size: 4.063rem;
+  line-height: 6.0945rem;
+  font-family: "Tex Gyre Adventor Bold";
+  margin: 6.875rem auto 5rem; }
+header .logo {
+  width: 10.938rem; }
+header .app_icon {
+  width: 20.625rem; }
 
 main h1 {
   font-size: 3.75rem;
@@ -93,7 +91,7 @@ main h1 {
 main p {
   font-size: 1.875rem;
   line-height: 3rem;
-  font-family: "Montserrat Light";
+  font-family: "Montserrat Regular";
   margin: 0.438rem auto 1.25rem; }
   main p i {
     font-size: 1.875rem;
@@ -138,55 +136,129 @@ main .cards_section {
       width: 18.75rem;
       z-index: -1;
       margin: 0; }
-main .steps_section .step {
-  width: 100%;
-  clear: both;
-  border: 1px solid purple; }
-  main .steps_section .step:nth-child(odd) .step_img {
-    float: left;
-    border: 1px solid blue; }
-  main .steps_section .step:nth-child(odd) .step_text {
-    float: right;
-    border: 1px solid aqua; }
-  main .steps_section .step:nth-child(even) .step_img {
-    float: right;
-    border: 1px solid blue; }
-  main .steps_section .step:nth-child(even) .step_text {
-    float: left;
-    border: 1px solid aqua; }
-  main .steps_section .step .step_img {
-    width: 50%; }
-  main .steps_section .step .step_text {
-    width: 50%; }
-  main .steps_section .step#step1 .step_img #tv {
-    width: 46.563rem; }
-  main .steps_section .step#step1 .step_img #box {
-    width: 16.875rem; }
-  main .steps_section .step#step2 .step_img #remote {
-    width: 46.875rem; }
-  main .steps_section .step#step3 .step_img img {
-    height: 9.563rem;
-    width: auto; }
-  main .steps_section .step#step4 .step_img #question {
-    width: 20.625rem; }
-  main .steps_section .step#step4 .step_img #code {
-    width: 17.813rem; }
+main .steps_section {
+  height: 131.25rem; }
+  main .steps_section .step {
+    width: 100%;
+    clear: both; }
+    main .steps_section .step:nth-child(odd) .step_text {
+      float: right; }
+    main .steps_section .step:nth-child(even) .step_text {
+      float: left; }
+    main .steps_section .step .step_img {
+      position: relative;
+      width: 100%; }
+    main .steps_section .step#step1 .step_img #tv {
+      position: absolute;
+      left: -1.875rem;
+      top: calc(-0.087488663525924 * 600px);
+      right: 0;
+      width: 46.563rem;
+      z-index: -1;
+      margin: 0; }
+    main .steps_section .step#step1 .step_img #box {
+      position: absolute;
+      left: 24.375rem;
+      top: 23.125rem;
+      right: 0;
+      width: 16.875rem;
+      z-index: -1;
+      margin: 0; }
+    main .steps_section .step#step1 .step_text {
+      padding: 11.25rem 6.875rem; }
+    main .steps_section .step#step2 .step_img #remote {
+      position: absolute;
+      left: initial;
+      top: 8.125rem;
+      right: -3.125rem;
+      width: 46.875rem;
+      z-index: 1;
+      margin: 0; }
+    main .steps_section .step#step2 .step_text {
+      padding: 6.875rem 3.125rem; }
+    main .steps_section .step#step3 .step_img img {
+      height: 9.563rem; }
+      main .steps_section .step#step3 .step_img img#classic {
+        position: absolute;
+        left: 4.063rem;
+        top: 5rem;
+        right: 0;
+        width: auto;
+        z-index: 1;
+        margin: 0; }
+      main .steps_section .step#step3 .step_img img#deathmatch {
+        position: absolute;
+        left: 16.875rem;
+        top: 5rem;
+        right: 0;
+        width: auto;
+        z-index: 1;
+        margin: 0; }
+      main .steps_section .step#step3 .step_img img#speed {
+        position: absolute;
+        left: 28.125rem;
+        top: 5rem;
+        right: 0;
+        width: auto;
+        z-index: 1;
+        margin: 0; }
+    main .steps_section .step#step3 .step_text {
+      padding: 1.25rem 3.125rem 1.25rem 5rem; }
+    main .steps_section .step#step4 .step_img #question {
+      position: absolute;
+      left: 38.125rem;
+      top: 9.063rem;
+      right: 0;
+      width: 20.625rem;
+      z-index: 1;
+      margin: 0; }
+    main .steps_section .step#step4 .step_img #code {
+      position: absolute;
+      left: 51.875rem;
+      top: 11.563rem;
+      right: 0;
+      width: 17.813rem;
+      z-index: -1;
+      margin: 0; }
+    main .steps_section .step#step4 .step_text {
+      padding: 17.5rem 4.063rem 16.875rem; }
 main .packs_section .packs {
-  visibility: hidden;
-  height: 500px; }
+  height: 62.5rem;
+  background: #ad57c9; }
+  main .packs_section .packs div {
+    display: none; }
+main .packs_section h1 {
+  padding: 3.125rem 0; }
+main .packs_section .load {
+  margin: 2.813rem auto; }
 main .packs_section .hand {
-  width: 10.625rem; }
+  width: 10.625rem;
+  margin: 7.5rem auto 0; }
+main .packs_section .divider {
+  width: 65%;
+  height: 1px;
+  margin-top: -0.375rem;
+  background: #e6e6e6; }
 
 footer .links div {
   font-size: 15px;
   line-height: 22.5px;
   font-family: "Montserrat Regular"; }
+  footer .links div#terms {
+    background: #f6cb16; }
+  footer .links div#contact {
+    background: black; }
+  footer .links div#fb {
+    background: #3b5998; }
+  footer .links div#tw {
+    background: #55acee; }
 footer p {
   font-size: 15px;
   line-height: 22.5px;
   font-family: "Montserrat Light";
   color: #797979; }
 footer img {
-  width: 17.5rem; }
+  width: 17.5rem;
+  margin: 0.875rem auto 1.125rem; }
 
 /*# sourceMappingURL=application.css.map */

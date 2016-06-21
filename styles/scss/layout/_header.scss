@@ -1,10 +1,9 @@
 
 
 header {
-  margin: $px60 auto $px110;
   h1 {
     @include font( $px65, $fontTexGyreAdventorBold );
-    margin: $px80 auto;
+    margin: $px110 auto $px80;
   }
   .logo {
     width: $px175;
