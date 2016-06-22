@@ -3,7 +3,7 @@
 header {
   h1 {
     @include font( $px65, $fontTexGyreAdventorBold );
-    margin: $px110 auto $px80;
+    margin: $px50 auto $px80;
   }
   .logo {
     width: $px175;

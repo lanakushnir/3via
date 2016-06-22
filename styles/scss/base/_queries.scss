@@ -1,9 +1,46 @@
 
 
+@media only screen and ( min-width : 1440px ) {
+  html { @include font( 30px ); }
+  // html { @include font( 30px ); }
+}
+
+// 15" screen 2880px resolution
+@media only screen and ( max-width : 1440px ) {
+  html { @include font( 22px ); } // 22px
+  // html { @include font( 22px ); }
+}
+// 13.3" screen 2560px resolution
+@media only screen and ( max-width : 1280px ) {
+  html { @include font( 20px ); } // 20px
+  // html { @include font( 20px ); } // 20px
+}
+
 @media only screen and (min-width : 1220px) {
-  html { @include font( 16px ); }
+// html { @include font( 16px ); }
 }
 
 @media only screen and (max-width : 1220px) {
-  html { @include font( 12px ); }
+  // html { @include font( 12px ); }
 }
+
+// iMac 27" (2560x1440-native) BrowserFS(2560x1346)
+// iMac 27" (5120x2880-retina)
+// iMac 21.5" (1920x1080-native) (4096x2304-retina)
+//
+// MacBookPro 15" (2880x1800-retina) -> 1440x900
+// MacBookPro 13.3" (2560x1600-retina) -> 1280x800
+// MacBookAir 13.3" (1440x900-native)
+// MacBookAir 11.6" (1366x768-native)
+// MacBook 12" (2304x1440-retina)
+//
+// iPadPro 12.9" (2732x2048-retina) -> 1366x1024
+// iPadPro 9.7" (2048x1536-retina) -> 1024x768
+// iPadAir2 9.7" (2048x1536-retina) -> 1024x768
+// iPadMini4 7.9" (2048x1536-retina) -> 1024x768
+// iPadMini2 7.9" (2048x1536-retina) -> 1024x768
+//
+// iPhone6Plus 5.5" (1920x1080-retina) -> 736x414
+// iPhone6 4.7" (1334x750-retina) -> 667x375
+// iPhoneSE 4" (1136x640-retina) -> 568x320
+// iPhone4 3.5" (960x640-retina) -> 480x320

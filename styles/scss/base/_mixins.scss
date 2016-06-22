@@ -1,7 +1,7 @@
 
 
 // Font Size & Line Height //
-@mixin font( $size: $px16, $family: $fontMontserratRegular, $index: 1.5 ) {
+@mixin font( $size: $px30, $family: $fontMontserratRegular, $index: 1.5 ) {
     font-size: $size;
     line-height: $size * $index;
     font-family: $family;
