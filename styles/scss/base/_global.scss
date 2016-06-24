@@ -15,8 +15,22 @@ body {
   text-align: center;
   margin: auto;
   width: 1200px;
-  margin: 60px auto; ;
-
+  margin: $px60 auto; ;
+  // border: 1px solid red;
+  .half {
+    position: absolute;
+    width: 1px;
+    height: 4783px;
+    left: 50vw;
+    background: red;
+  }
+  .screenheight {
+    position: fixed;
+    width: 1200px;
+    height: 1px;
+    top: 829px;
+    background: blue;
+  }
   h1 {
     span {
       color: $active3via;

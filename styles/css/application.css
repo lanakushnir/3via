@@ -45,7 +45,19 @@ body {
   text-align: center;
   margin: auto;
   width: 1200px;
-  margin: 60px auto; }
+  margin: 2rem auto; }
+  body .half {
+    position: absolute;
+    width: 1px;
+    height: 4783px;
+    left: 50vw;
+    background: red; }
+  body .screenheight {
+    position: fixed;
+    width: 1200px;
+    height: 1px;
+    top: 829px;
+    background: blue; }
   body h1 span {
     color: #f6cb16; }
   body a {
@@ -79,15 +91,17 @@ body {
     font-size: 20px;
     line-height: 30px;
     font-family: "Montserrat Regular"; } }
-header h1 {
-  font-size: 2.167rem;
-  line-height: 3.2505rem;
-  font-family: "Tex Gyre Adventor Bold";
-  margin: 1.667rem auto 2.667rem; }
-header .logo {
-  width: 5.833rem; }
-header .app_icon {
-  width: 11rem; }
+header {
+  margin-bottom: 3.333rem; }
+  header h1 {
+    font-size: 2.167rem;
+    line-height: 3.2505rem;
+    font-family: "Tex Gyre Adventor Bold";
+    margin: 1.667rem auto 2.667rem; }
+  header .logo {
+    width: 5.833rem; }
+  header .app_icon {
+    width: 11rem; }
 
 main h1 {
   font-size: 2rem;
@@ -105,8 +119,7 @@ main p {
 main .cards_section {
   color: white;
   position: relative;
-  height: 37.667rem;
-  margin-top: 5rem; }
+  padding: 5rem 0 1.667rem; }
   main .cards_section::before {
     content: '';
     -webkit-transform: skew(0deg, -5deg);
@@ -118,6 +131,7 @@ main .cards_section {
     left: calc((-100vw + 100%)/2);
     top: calc(0.087488663525924 * 53%);
     right: 0;
+    bottom: 0;
     width: 100vw;
     z-index: -10;
     margin: 0;
@@ -126,117 +140,153 @@ main .cards_section {
     background-size: cover; }
   main .cards_section .cards {
     position: relative;
-    height: 22.167rem; }
+    width: 16rem;
+    height: 15.5rem; }
     main .cards_section .cards .card#back {
       position: absolute;
-      left: 11.667rem;
-      top: 6.667rem;
+      left: 0;
+      top: 0;
       right: 0;
+      bottom: 0;
       width: 10rem;
       z-index: 1;
       margin: 0; }
     main .cards_section .cards .card#front {
       position: absolute;
-      left: 18rem;
-      top: 8.333rem;
+      left: initial;
+      top: initial;
       right: 0;
+      bottom: 0;
       width: 10rem;
       z-index: 1;
       margin: 0; }
-main .steps_section {
-  height: 70rem; }
+@media only screen and (max-width: 1440px) {
   main .steps_section .step {
-    width: 100%;
-    clear: both; }
-    main .steps_section .step:nth-child(odd) .step_text {
-      float: right; }
-    main .steps_section .step:nth-child(even) .step_text {
-      float: left; }
-    main .steps_section .step .step_img {
-      position: relative;
-      width: 100%; }
-    main .steps_section .step#step1 .step_img #tv {
-      position: absolute;
-      left: -1rem;
-      top: calc(-0.087488663525924 * 600px);
-      right: 0;
-      width: 25rem;
-      z-index: -1;
-      margin: 0; }
-    main .steps_section .step#step1 .step_img #box {
-      position: absolute;
-      left: 13rem;
-      top: 12.333rem;
-      right: 0;
-      width: 9rem;
-      z-index: -1;
-      margin: 0; }
-    main .steps_section .step#step1 .step_text {
-      padding: 6rem 3.667rem; }
+    width: 90%; } }
+main .steps_section .step:nth-child(odd) .step_img, main .steps_section .step:nth-child(even) .step_text {
+  text-align: left;
+  width: 50%;
+  margin-left: 0; }
+  main .steps_section .step:nth-child(odd) .step_img.step_img, main .steps_section .step:nth-child(even) .step_text.step_img {
+    position: relative; }
+  main .steps_section .step:nth-child(odd) .step_img.step_text, main .steps_section .step:nth-child(even) .step_text.step_text {
+    text-align: center; }
+main .steps_section .step:nth-child(odd) .step_text, main .steps_section .step:nth-child(even) .step_img {
+  text-align: right;
+  width: 50%;
+  margin-right: 0; }
+  main .steps_section .step:nth-child(odd) .step_text.step_img, main .steps_section .step:nth-child(even) .step_img.step_img {
+    position: relative; }
+  main .steps_section .step:nth-child(odd) .step_text.step_text, main .steps_section .step:nth-child(even) .step_img.step_text {
+    text-align: center; }
+@media only screen and (max-width: 1440px) {
+  main .steps_section .step#step1 .step_img {
+    margin-top: 1rem; } }
+main .steps_section .step#step1 .step_img #tv {
+  position: absolute;
+  left: -1rem;
+  top: calc(-0.087488663525924 * 600px);
+  right: 0;
+  bottom: 0;
+  width: 25rem;
+  z-index: -1;
+  margin: 0; }
+main .steps_section .step#step1 .step_img #box {
+  position: absolute;
+  left: 13rem;
+  top: 12.333rem;
+  right: 0;
+  bottom: 0;
+  width: 9rem;
+  z-index: 1;
+  margin: 0; }
+main .steps_section .step#step1 .step_text {
+  padding: 5rem 0; }
+main .steps_section .step#step2 .step_img #remote {
+  position: absolute;
+  left: -3.667rem;
+  top: 7.333rem;
+  right: 0;
+  bottom: 0;
+  width: 25rem;
+  z-index: 1;
+  margin: 0; }
+  @media only screen and (max-width: 1440px) {
     main .steps_section .step#step2 .step_img #remote {
       position: absolute;
-      left: initial;
-      top: 4.333rem;
-      right: -1.667rem;
+      left: -3.667rem;
+      top: 6.667rem;
+      right: 0;
+      bottom: 0;
       width: 25rem;
       z-index: 1;
-      margin: 0; }
-    main .steps_section .step#step2 .step_text {
-      padding: 3.667rem 1.667rem; }
-    main .steps_section .step#step3 .step_img img {
-      height: 5rem; }
-      main .steps_section .step#step3 .step_img img#classic {
-        position: absolute;
-        left: 2.167rem;
-        top: 2.667rem;
-        right: 0;
-        width: auto;
-        z-index: 1;
-        margin: 0; }
-      main .steps_section .step#step3 .step_img img#deathmatch {
-        position: absolute;
-        left: 9rem;
-        top: 2.667rem;
-        right: 0;
-        width: auto;
-        z-index: 1;
-        margin: 0; }
-      main .steps_section .step#step3 .step_img img#speed {
-        position: absolute;
-        left: 15rem;
-        top: 2.667rem;
-        right: 0;
-        width: auto;
-        z-index: 1;
-        margin: 0; }
-    main .steps_section .step#step3 .step_text {
-      padding: 0.667rem 1.667rem 0.667rem 2.667rem; }
-    main .steps_section .step#step4 .step_img #question {
-      position: absolute;
-      left: 20.333rem;
-      top: 4.833rem;
-      right: 0;
-      width: 11rem;
-      z-index: 1;
-      margin: 0; }
-    main .steps_section .step#step4 .step_img #code {
-      position: absolute;
-      left: 27.667rem;
-      top: 6.167rem;
-      right: 0;
-      width: 9.5rem;
-      z-index: -1;
-      margin: 0; }
-    main .steps_section .step#step4 .step_text {
-      padding: 9.333rem 2.167rem 9rem; }
+      margin: 0; } }
+main .steps_section .step#step2 .step_text {
+  padding: 6rem 0 3.333rem; }
+main .steps_section .step#step3 .step_img img {
+  height: 5rem; }
+  main .steps_section .step#step3 .step_img img#classic {
+    position: absolute;
+    left: 2.167rem;
+    top: 2.667rem;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    z-index: 1;
+    margin: 0; }
+  main .steps_section .step#step3 .step_img img#deathmatch {
+    position: absolute;
+    left: 9rem;
+    top: 2.667rem;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    z-index: 1;
+    margin: 0; }
+  main .steps_section .step#step3 .step_img img#speed {
+    position: absolute;
+    left: 15rem;
+    top: 2.667rem;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    z-index: 1;
+    margin: 0; }
+main .steps_section .step#step3 .step_text {
+  padding: 0 0 2.667rem; }
+main .steps_section .step#step4 .step_img #question {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 11rem;
+  z-index: 1;
+  margin: 0; }
+main .steps_section .step#step4 .step_img #code {
+  position: absolute;
+  left: 6.667rem;
+  top: 1.333rem;
+  right: 0;
+  bottom: 0;
+  width: 9.5rem;
+  z-index: -1;
+  margin: 0; }
+main .steps_section .step#step4 .step_text {
+  padding: 4.333rem 0 9rem; }
 main .packs_section .packs {
   height: 33.333rem;
   position: relative; }
+  @media only screen and (max-width: 1440px) {
+    main .packs_section .packs {
+      height: 31rem;
+      width: calc(100% - 15rem); } }
   main .packs_section .packs .pack#castle {
     position: absolute;
     left: -2.333rem;
     top: 0;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 1;
     margin: 0; }
@@ -245,6 +295,7 @@ main .packs_section .packs {
     left: 14.333rem;
     top: 2.333rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 2;
     margin: 0; }
@@ -253,6 +304,7 @@ main .packs_section .packs {
     left: -7.667rem;
     top: 7.167rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 3;
     margin: 0; }
@@ -261,6 +313,7 @@ main .packs_section .packs {
     left: 4.667rem;
     top: 7.667rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 4;
     margin: 0; }
@@ -269,6 +322,7 @@ main .packs_section .packs {
     left: 17.833rem;
     top: 9.333rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 3;
     margin: 0; }
@@ -277,6 +331,7 @@ main .packs_section .packs {
     left: -9.333rem;
     top: 14.333rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 2;
     margin: 0; }
@@ -285,6 +340,7 @@ main .packs_section .packs {
     left: 8.333rem;
     top: 16.333rem;
     right: 0;
+    bottom: 0;
     width: 33.333rem;
     z-index: 1;
     margin: 0; }
@@ -293,16 +349,25 @@ main .packs_section h1 {
 main .packs_section .load {
   margin: 1.5rem auto 4rem; }
 main .packs_section .hand {
-  width: 5.667rem; }
-main .packs_section .divider {
-  width: 65%;
-  height: 1px;
-  margin-top: -0.2rem;
-  background: #e6e6e6; }
+  line-height: 0;
+  position: relative; }
+  main .packs_section .hand img {
+    width: 5.667rem; }
+  main .packs_section .hand .divider {
+    position: absolute;
+    left: calc( (100% - 65%)/2);
+    top: initial;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    z-index: 1;
+    margin: 0;
+    height: 1px;
+    background: #e6e6e6; }
 
 footer .links div {
-  font-size: 15px;
-  line-height: 22.5px;
+  font-size: 0.5rem;
+  line-height: 0.75rem;
   font-family: "Montserrat Regular"; }
   footer .links div#terms {
     background: #f6cb16; }
@@ -313,8 +378,8 @@ footer .links div {
   footer .links div#tw {
     background: #55acee; }
 footer p {
-  font-size: 15px;
-  line-height: 22.5px;
+  font-size: 0.5rem;
+  line-height: 0.75rem;
   font-family: "Montserrat Light";
   color: #797979; }
 footer img {

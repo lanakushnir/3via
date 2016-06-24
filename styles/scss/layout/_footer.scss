@@ -2,7 +2,7 @@
 
 footer {
   .links div {
-    @include font( 15px, $fontMontserratRegular );
+    @include font( $px15, $fontMontserratRegular );
     @extend %link-button;
     &#terms {
       background: $active3via;
@@ -18,7 +18,7 @@ footer {
     }
   }
   p {
-    @include font( 15px, $fontMontserratLight );
+    @include font( $px15, $fontMontserratLight );
     color: $H797979;
   }
   img {

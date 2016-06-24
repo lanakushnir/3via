@@ -1,6 +1,7 @@
 
 
 header {
+  margin-bottom: $px100;
   h1 {
     @include font( $px65, $fontTexGyreAdventorBold );
     margin: $px50 auto $px80;
