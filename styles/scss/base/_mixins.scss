@@ -1,0 +1,24 @@
+
+
+// Font Size & Line Height //
+@mixin font( $size: $px30, $family: $fontMontserratRegular, $index: 1.5 ) {
+    font-size: $size;
+    line-height: $size * $index;
+    font-family: $family;
+}
+@mixin transform-skew( $x, $y ) {
+  -webkit-transform: skew(#{$x}deg, #{$y}deg);
+  -moz-transform: skew(#{$x}deg, #{$y}deg);
+  -o-transform: skew(#{$x}deg, #{$y}deg);
+  -ms-transform: skew(#{$x}deg, #{$y}deg);
+  transform: skew(#{$x}deg, #{$y}deg);
+}
+@mixin absolute( $left: $left, $top: $top, $width: $width, $zindex: 1, $right: 0 ) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  right: $right;
+  width: $width;
+  z-index: $zindex;
+  margin: 0;
+}

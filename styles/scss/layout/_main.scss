@@ -1,0 +1,160 @@
+
+
+main {
+
+  h1 {
+    @include font( $px60, $fontTexGyreAdventorBold, 1.35 );
+  }
+  p {
+    @include font( $px30, $fontMontserratRegular, 1.6 );
+    margin: $px10 auto $px20;
+    i {
+      @include font( $px30, $fontTexGyreAdventorItalic );
+    }
+  }
+  // CARDS
+  .cards_section {
+    color: $White;
+    position: relative;
+    height: $px1130;
+    margin-top: $px150;
+    &::before {
+      content: '';
+      @include transform-skew(0, -5);
+      @include absolute( calc((-100vw + 100%)/2), calc(0.087488663525924 * 53%), 100vw, -10 );
+      height: 100%;
+      background: $active3via url(../../img/yellow-bg.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    .cards {
+      position: relative;
+      height: $px665;
+      .card {
+        &#back {
+          @include absolute( $px350, $px200, $px300 );
+        }
+        &#front {
+          @include absolute( $px540, $px250, $px300 );
+        }
+      }
+    }
+  }
+  // STEPS
+  .steps_section {
+    height: $px2100;
+    .step {
+      width: 100%;
+      clear: both;
+      &:nth-child(odd) .step_text {
+        float: right;
+      }
+      &:nth-child(even) .step_text {
+        float: left;
+      }
+      .step_img {
+        position: relative;
+        width: 100%;
+      }
+      &#step1 {
+        .step_img {
+          #tv {
+            @include absolute( -$px30, calc(-0.087488663525924 * 600px), $px750, -1 );
+          }
+          #box {
+            @include absolute( $px390, $px370, $px270, -1 );
+          }
+        }
+        .step_text {
+          padding: $px180 $px110;
+        }
+      }
+      &#step2 {
+        .step_img {
+          #remote {
+            @include absolute( initial, $px130, $px750, 1, -$px50 );
+          }
+        }
+        .step_text {
+          padding: $px110 $px50;
+        }
+      }
+      &#step3 {
+        .step_img img {
+          height: $px150;
+          &#classic {
+            @include absolute( $px65, $px80, auto );
+          }
+          &#deathmatch {
+            @include absolute( $px270, $px80, auto );
+          }
+          &#speed {
+            @include absolute( $px450, $px80, auto );
+          }
+        }
+        .step_text {
+          padding: $px20 $px50 $px20 $px80;
+        }
+      }
+      &#step4 {
+        .step_img {
+          #question {
+            @include absolute( $px610, $px145, $px330 );
+          }
+          #code {
+            @include absolute( $px830, $px185, $px285, -1 );
+          }
+        }
+        .step_text {
+          padding: $px280 $px65 $px270;
+        }
+      }
+    }
+  }
+  // PACKS
+  .packs_section {
+    .packs {
+      height: $px1000;
+      position: relative;
+      .pack {
+        &#castle {
+          @include absolute( -$px70, 0, $px1000 );
+        }
+        &#field {
+          @include absolute( $px430, $px70, $px1000, 2 );
+        }
+        &#orange {
+          @include absolute( -$px230, $px215, $px1000, 3 );
+        }
+        &#panda {
+          @include absolute( $px140, $px230, $px1000, 4 );
+        }
+        &#mountain {
+          @include absolute( $px535, $px280, $px1000, 3 );
+        }
+        &#flower {
+          @include absolute( -$px280, $px430, $px1000, 2 );
+        }
+        &#aurora {
+          @include absolute( $px250, $px490, $px1000 );
+        }
+      }
+    }
+    h1 {
+      padding: $px50 0;
+    }
+    .load {
+      @extend %load-button;
+      margin: $px45 auto $px120;
+    }
+    .hand {
+      width: $px170;
+    }
+    .divider {
+      width: 65%;
+      height: 1px;
+      margin-top: -$px6;
+      background: $HE6E6E6;
+    }
+  }
+
+}
