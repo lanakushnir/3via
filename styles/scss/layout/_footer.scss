@@ -2,20 +2,12 @@
 
 footer {
   .links div {
-    @include font( $px15, $fontMontserratRegular );
     @extend %link-button;
-    &#terms {
-      background: $active3via;
-    }
-    &#contact {
-      background: $Black;
-    }
-    &#fb {
-      background: $facebook;
-    }
-    &#tw {
-      background: $twitter;
-    }
+    @include font( $px15, $fontMontserratRegular );
+    &#terms { background: $Active3via; }
+    &#contact { background: $Black; }
+    &#fb { background: $Facebook; }
+    &#tw { background: $Twitter; }
   }
   p {
     @include font( $px15, $fontMontserratLight );

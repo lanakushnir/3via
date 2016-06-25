@@ -1,3 +1,8 @@
+img/.DS_Store
+styles/.sass-cache
+styles/css/application.css
+styles/css/application.css.map
+styles/scss/base/_index.scss
+styles/scss/layout/_index.scss
+styles/scss/application.scss
 .DS_Store
-text.txt
-!/styles/.sass-cache/*

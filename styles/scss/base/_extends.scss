@@ -9,7 +9,17 @@
   color: $White;
   width: $px145;
   height: $px40;
-  padding: $px10;
-  margin: $px50 $px8;
+  padding: $px8;
+  margin: $px45 $px8;
   border-radius: $px50;
+}
+
+%size-adjust {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+%relative {
+  position: relative;
 }

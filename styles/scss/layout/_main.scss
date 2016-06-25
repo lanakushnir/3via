@@ -14,9 +14,9 @@ main {
   }
   // CARDS
   .cards_section {
-    color: $White;
-    position: relative;
+    @extend %relative;
     padding: $px150 0 $px50;
+    color: $White;
     &::before {
       content: '';
       @include transform-skew(0, -5);
@@ -26,32 +26,21 @@ main {
       background-size: cover;
     }
     .cards {
-      position: relative;
+      @extend %relative;
       width: $px480;
       height: $px465;
       .card {
-        &#back {
-          @include absolute( 0, 0, $px300 );
-        }
-        &#front {
-          @include absolute( initial, initial, $px300 );
-        }
+        &#back { @include absolute( 0, 0, $px300 ); }
+        &#front { @include absolute( initial, initial, $px300 ); }
       }
     }
   }
   // STEPS
   .steps_section {
     .step {
-      // border: 1px solid purple;
-      @include respond-to( 1440 ) {
-        width: 90%;
-      };
-      &:nth-child(odd) .step_img, &:nth-child(even) .step_text {
-        @include step-float( left );
-      }
-      &:nth-child(odd) .step_text, &:nth-child(even) .step_img {
-        @include step-float( right );
-      }
+      @include respond-to( 1440 ) { width: 90%; };
+      &:nth-child(odd) .step_img, &:nth-child(even) .step_text { @include step-float( left ); }
+      &:nth-child(odd) .step_text, &:nth-child(even) .step_img { @include step-float( right ); }
 
       &#step1 {
         .step_img {
@@ -63,10 +52,8 @@ main {
       }
       &#step2 {
         .step_img {
-          #remote {
-            @include absolute( -$px110, $px220, $px750 );
-            @include respond-to( 1440 ) { @include absolute( -$px110, $px200, $px750 ); };
-          }
+          #remote { @include absolute( -$px110, $px220, $px750 );
+                    @include respond-to( 1440 ) { @include absolute( -$px110, $px200, $px750 ); }; }
         }
         .step_text { padding: $px180 0 $px100; }
       }
@@ -77,9 +64,7 @@ main {
           &#deathmatch { @include absolute( $px270, $px80, auto ); }
           &#speed { @include absolute( $px450, $px80, auto ); }
         }
-        .step_text {
-          padding: 0 0 $px80;
-        }
+        .step_text { padding: 0 0 $px80; }
       }
       &#step4 {
         .step_img {
@@ -93,9 +78,9 @@ main {
   // PACKS
   .packs_section {
     .packs {
+      @extend %relative;
       height: $px1000;
       @include respond-to( 1440 ) { height: $px930; width: calc(100% - #{$px450}); };
-      position: relative;
       .pack {
         &#castle { @include absolute( -$px70, 0, $px1000 ); }
         &#field { @include absolute( $px430, $px70, $px1000, 2 ); }
@@ -114,11 +99,9 @@ main {
       margin: $px45 auto $px120;
     }
     .hand {
+      @extend %relative;
       line-height: 0;
-      position: relative;
-      img {
-        width: $px170;
-      }
+      img { width: $px170; }
       .divider {
         @include absolute( calc( (100% - 65%)/2), initial, 65%);
         height: 1px;
