@@ -1,17 +1,12 @@
 
 
 header {
+  margin-bottom: $px100;
   h1 {
     @include font( $px65, $fontTexGyreAdventorBold );
     margin: $px50 auto $px80;
   }
-  .logo {
-    width: $px175;
-  }
-  .app_icon {
-    width: $px330;
-  }
-  .load {
-    @extend %load-button;
-  }
+  .logo { width: $px175; }
+  .app_icon { width: $px330; }
+  .load { @extend %load-button; }
 }

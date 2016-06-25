@@ -1,0 +1,7 @@
+img
+styles/.sass-cache
+styles/css
+styles/scss/base/_index.scss
+styles/scss/layout/_index.scss
+styles/scss/application.scss
+.DS_Store

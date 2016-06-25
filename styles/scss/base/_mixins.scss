@@ -6,6 +6,13 @@
     line-height: $size * $index;
     font-family: $family;
 }
+@mixin respond-to( $width ) {
+  @media only screen and ( max-width : #{$width}px ) {
+    @content;
+  }
+}
+
+// CARDS SECTION
 @mixin transform-skew( $x, $y ) {
   -webkit-transform: skew(#{$x}deg, #{$y}deg);
   -moz-transform: skew(#{$x}deg, #{$y}deg);
@@ -13,12 +20,25 @@
   -ms-transform: skew(#{$x}deg, #{$y}deg);
   transform: skew(#{$x}deg, #{$y}deg);
 }
-@mixin absolute( $left: $left, $top: $top, $width: $width, $zindex: 1, $right: 0 ) {
+@mixin absolute( $left: $left, $top: $top, $width: $width, $zindex: 1, $right: 0, $bottom: 0 ) {
   position: absolute;
   left: $left;
   top: $top;
   right: $right;
+  bottom: $bottom;
   width: $width;
   z-index: $zindex;
   margin: 0;
+}
+// STEPS SECTION
+@mixin step-float( $side ) {
+  text-align: $side;
+  width: 50%;
+  margin-#{$side}: 0;
+  &.step_img {
+    position: relative;
+  }
+  &.step_text {
+    text-align: center;
+  }
 }

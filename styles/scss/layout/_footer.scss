@@ -2,23 +2,17 @@
 
 footer {
   .links div {
-    @include font( 15px, $fontMontserratRegular );
     @extend %link-button;
-    &#terms {
-      background: $active3via;
-    }
-    &#contact {
-      background: $Black;
-    }
-    &#fb {
-      background: $facebook;
-    }
-    &#tw {
-      background: $twitter;
-    }
+    @include font( $px15, $fontMontserratRegular );
+    @include respond-to( 1280 ) { @include font( $px18, $fontMontserratRegular, 1.33 ); };
+    &#terms { background: $Active3via; }
+    &#contact { background: $Black; }
+    &#fb { background: $Facebook; }
+    &#tw { background: $Twitter; }
   }
   p {
-    @include font( 15px, $fontMontserratLight );
+    @include font( $px15, $fontMontserratLight );
+    @include respond-to( 1280 ) { @include font( $px18, $fontMontserratLight, 2 ); };
     color: $H797979;
   }
   img {
